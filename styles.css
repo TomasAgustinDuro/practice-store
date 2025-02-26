@@ -1,0 +1,391 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos generales para el contenedor principal */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8; /* Color de fondo suave */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilo para el formulario */
+header form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%; /* Ajusta el tamaño del formulario según lo necesites */
+  max-width: 600px;
+}
+
+/* Estilo para el campo de texto */
+header input[type="text"] {
+  width: 80%; /* El campo de búsqueda ocupa la mayor parte */
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+/* Estilo para el botón de búsqueda */
+header button {
+  padding: 8px 17px;
+  background-color: #4caf50; /* Color de fondo verde */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Efecto suave al pasar el cursor */
+}
+
+header button:hover {
+  background-color: #45a049; /* Color más oscuro al hacer hover */
+}
+
+/* Estilo para el botón de ver carrito */
+#open {
+  padding: 10px 30px;
+  background-color: #007bff; /* Color de fondo azul */
+  color: white;
+  display: flex;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Efecto suave al pasar el cursor */
+}
+
+#cart-quantity {
+    background-color: red;
+    border-radius: 100%;
+    margin:  0 .5em;
+    padding: .3em;
+    color: white;
+}
+
+#open:hover {
+  background-color: #0056b3; /* Color más oscuro al hacer hover */
+}
+section {
+  display: flex;
+  margin-top: 2em;
+  padding: 1em;
+}
+
+.filters-container {
+  width: 25%;
+}
+
+.filters-container form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1em;
+}
+
+/* Contenedor principal de productos */
+#card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+  min-height: 350px; 
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.card img {
+  height: 200px;
+  width: 100%;
+  object-position: 50% 50%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+  text-align: center;
+  margin: 0;
+  padding: 1em;
+  flex-grow: 1;
+}
+
+.card p {
+  font-size: 16px;
+  flex-grow: 1;
+  padding: 1em;
+  text-align: center;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.card .addButton,
+.card .viewMoreButton {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 45%;
+}
+
+.card .addButton:hover,
+.card .viewMoreButton:hover {
+  background-color: #0056b3;
+}
+
+.addButton {
+  background-color: #28a745;
+  color: white;
+}
+
+.addButton:hover {
+  background-color: #218838;
+}
+
+.viewMoreButton {
+  background-color: #007bff;
+  color: white;
+}
+
+.viewMoreButton:hover {
+  background-color: #0056b3;
+}
+
+/* Contenedor del carrito */
+/* #cart-container {
+  position: fixed;
+  top: 0;
+  right: -450px;
+  width: 450px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+}
+
+#cart-container.active {
+  right: 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.cart-item h3 {
+  font-size: 0.7em;
+  margin: .2em;
+  max-width: 30%;
+}
+
+.cart-item p {
+  font-size: 0.7em;
+  font-weight: bold;
+  margin: .2em;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+#cart-container header {
+  display: flex;
+  justify-content: space-between;
+} */
+/* Estilos generales para el carrito */
+#cart-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100vh;
+  background-color: #f9f9f9;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+#cart-container.active {
+  transform: translateX(0);
+}
+
+/* Cabecera del carrito */
+#cart-container header {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cart-container header p {
+  margin: 0;
+}
+
+#closeCartButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#closeCartButton:hover {
+  opacity: 0.7;
+}
+
+/* Lista de productos en el carrito */
+.cart-list {
+  padding: 15px;
+  overflow-y: auto;
+  flex-grow: 1;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item h3 {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  width: 50%;
+}
+
+.cart-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #777;
+}
+
+.cart-item button.delete-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-item button.delete-button:hover {
+  background-color: #c0392b;
+}
+
+/* Diseño de la parte inferior del carrito (total) */
+#cart-container footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+#cart-container footer p {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Estilos del botón de apertura del carrito */
+#open {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#open:hover {
+  background-color: #444;
+}
+
+#cart-quantity {
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+#checkout-button {
+  background-color: #27ae60; /* Un verde que simboliza éxito o compra */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20px; /* Espaciado superior */
+}
+
+#checkout-button:hover {
+  background-color: #2ecc71; /* Verde más brillante cuando el mouse pasa por encima */
+  transform: scale(1.05); /* Efecto de escala al hacer hover */
+}
+
+#checkout-button:active {
+  background-color: #1e7a4b; /* Verde más oscuro al hacer click */
+  transform: scale(0.98); /* Reducir el tamaño al hacer click */
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <form action="">
+          <input type="text" id="inputSearch" placeholder="Inserte su producto">
+          
+          <button id="buttonSearch">Search</button>
+
+        </form>
+        <button id="open">🛒 Ver Carrito
+          <span id="cart-quantity"></span>
+        </button>
+      </div>
+    </header>
+    <section>
+      <div class="filters-container">
+        <h3>Filters</h3>
+
+        <form>
+          <div>
+            <input type="radio" name="filter" id="all" />
+            <label for="filter">All</label>
+          </div>
+
+          <div>
+            <input type="radio" name="filter" id="mens-clothing" />
+            <label for="filter">Men's Clothing</label>
+          </div>
+
+          <div>
+            <input type="radio" name="filter" id="jewelery" />
+            <label for="filter">Jewelery</label>
+          </div>
+
+          <div>
+            <input type="radio" name="filter" id="electronics" />
+            <label for="filter">Electronics</label>
+          </div>
+
+          <div>
+            <input type="radio" name="filter" id="womens-clothing" />
+            <label for="filter">Women's Clothing</label>
+          </div>
+        </form>
+      </div>
+      <div id="card-container"></div>
+    </section>
+
+    <div id="cart-container">
+      <header>
+        <p>Su carrito</p>
+
+        <button id="closeCartButton">X</button>
+      </header>
+
+      <main>
+        <div class="cart-list">
+
+        </div>
+      </main>
+
+      <footer class="cartFooter">
+        
+      </footer>
+    </div>
+
+    <script src="main.js"></script>
+
+  </body>
+</html>
